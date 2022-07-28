@@ -18,3 +18,13 @@
 .logo span {
     font-weight: 700;
 }
+
+@media (max-width: 720px) {
+    .header {
+        flex-wrap: wrap;
+        height: 120px;
+
+        justify-content: center;
+        gap: 10px;
+    }
+}
