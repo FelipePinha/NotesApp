@@ -9,7 +9,6 @@ export const Notes = () => {
             <Note />
             <Note />
             <Note />
-            <Note />
         </article>
     )
 }

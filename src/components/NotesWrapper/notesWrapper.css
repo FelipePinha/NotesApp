@@ -1,0 +1,4 @@
+.notesSection {
+    display: flex;
+    justify-content: space-between;
+}
