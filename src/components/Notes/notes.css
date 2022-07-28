@@ -1,0 +1,4 @@
+.notesArticle {
+    display: flex;
+    flex-wrap: wrap;
+}
