@@ -1,0 +1,20 @@
+.header {
+    width: 100vw;
+    height: 80px;
+    background: #222;
+    color: #fff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    font-weight: 700;
+}
