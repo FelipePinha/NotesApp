@@ -22,10 +22,6 @@ export const FormArea = () => {
         console.log('CHECK')
     }
 
-    const onError = () => {
-        console.log(errors)
-    }
-
     const validationSchema = yup.object({
         title: yup.string().required(),
         content: yup.string().required()
@@ -35,7 +31,7 @@ export const FormArea = () => {
 
 
     return (
-        <form className="form" onSubmit={handleSubmit(onSubmit, onError)}>
+        <form className="form" onSubmit={handleSubmit(onSubmit)}>
 
             <div className="inputContainer">
                 <label htmlFor="title">
