@@ -7,7 +7,7 @@ export const notesSlice = createSlice({
     initialState: initialState,
     reducers: {
         addNote: (state, { payload }) => {
-            [...state, payload]
+            return [...state, payload]
         }
     }
 })

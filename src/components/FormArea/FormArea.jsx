@@ -4,22 +4,22 @@ import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useForm } from "react-hook-form";
 import { InputError } from "../InputError/InputError";
+import { addNote } from "../../reducers/features/notesSlice";
+import { useDispatch } from 'react-redux'
+import { nanoid } from "@reduxjs/toolkit";
 import './formArea.css'
 
 export const FormArea = () => {
-    const [title, setTitle] = useState('')
-    const [content, setContent] = useState('')
+    const dispatch = useDispatch()
 
-    const handleTitleChange = (e) => {
-        setTitle(e.target.value)
-    }
+    
 
-    const handleContentChange = (e) => {
-        setContent(e.target.value)
-    }
-
-    const onSubmit = () => {
-        console.log('CHECK')
+    const onSubmit = (data) => {
+        dispatch(addNote({
+            id: nanoid(),
+            title: data.title,
+            content: data.content
+        }))
     }
 
     const validationSchema = yup.object({
@@ -28,7 +28,6 @@ export const FormArea = () => {
     })
 
     const { register, handleSubmit, formState: {errors} } = useForm({ resolver: yupResolver(validationSchema) })
-
 
     return (
         <form className="form" onSubmit={handleSubmit(onSubmit)}>
@@ -42,7 +41,6 @@ export const FormArea = () => {
                     type="text" 
                     id="title" 
                     name="title"
-                    onChange={handleTitleChange}
                     {...register('title')}
                 />
             </div>
@@ -57,7 +55,6 @@ export const FormArea = () => {
                     rows={15}
                     cols={30}
                     maxLength={580}
-                    onChange={handleContentChange}
                     {...register('content')}
                 />
             </div>
