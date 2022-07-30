@@ -1,5 +1,5 @@
 .form {
-    width: 600px;
+    min-width: 40%;
     height: 100vh;
 
     background-color: #333;
@@ -55,7 +55,7 @@
     display: flex;
     justify-content: flex-end;
 
-    padding: 0 20px;
+    padding: 0 50px;
 }
 
 .formActions .btn {
