@@ -55,3 +55,7 @@
     background: #555;
 }
 
+.active {
+    border: 3px solid #222;
+}
+
