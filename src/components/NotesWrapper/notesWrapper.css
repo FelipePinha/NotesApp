@@ -5,6 +5,6 @@
 
 @media (max-width: 720px) {
     .notesSection {
-        flex-wrap: wrap-reverse;
+        flex-direction: column-reverse;
     }
 }
