@@ -1,5 +1,5 @@
 .form {
-    min-width: 40%;
+    min-width: 30%;
     height: 100vh;
 
     background-color: #333;
@@ -25,12 +25,12 @@
 }
 
 .inputContainer label {
-    width: 80%;
+    width: 90%;
     margin-bottom: 5px;
 }
 
 .inputContainer #title {
-    width: 80%;
+    width: 90%;
     padding: 10px;
 
     outline: none;
@@ -40,7 +40,7 @@
 }
 
 .inputContainer #content {
-    width: 80%;
+    width: 90%;
     padding: 10px;
 
     outline: none;
@@ -55,7 +55,7 @@
     display: flex;
     justify-content: flex-end;
 
-    padding: 0 50px;
+    padding: 0 10px;
 }
 
 .formActions .btn {
