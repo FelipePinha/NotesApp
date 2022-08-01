@@ -5,14 +5,18 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { useForm } from "react-hook-form";
 import { InputError } from "../InputError/InputError";
 import { addNote } from "../../reducers/features/notesSlice";
-import { useDispatch } from 'react-redux'
+import { formToggle, selectFormActive } from "../../reducers/features/formToggleSlice"
+import { useDispatch, useSelector } from 'react-redux'
 import { nanoid } from "@reduxjs/toolkit";
 import './formArea.css'
 
 export const FormArea = () => {
+    const selectForm = useSelector(selectFormActive)
     const dispatch = useDispatch()
 
-    
+    const handleCloseModal = () => {
+        dispatch(formToggle(selectForm))
+    }
 
     const onSubmit = (data) => {
         dispatch(addNote({
@@ -61,7 +65,13 @@ export const FormArea = () => {
 
             <div className="formActions">
                 <button type="submit" className="btn submitBtn"><FaCheck /></button>
-                <button type="button" className="btn cancelBtn"><FaSlash /></button>
+                <button 
+                    onClick={handleCloseModal}
+                    type="button" 
+                    className="btn cancelBtn"
+                    >
+                        <FaSlash />
+                </button>
             </div>
         </form>
     )
