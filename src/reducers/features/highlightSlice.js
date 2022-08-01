@@ -8,8 +8,8 @@ export const highlightSlice = createSlice({
     name: 'highlight',
     initialState: initialState,
     reducers: {
-        setHighlight: (state) => {
-            return !state
+        setHighlight: (state, { payload }) => {
+            return payload
         } 
     }
 })

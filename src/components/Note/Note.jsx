@@ -3,18 +3,22 @@ import { useSelector, useDispatch } from 'react-redux'
 import { selectHighlight, setHighlight } from "../../reducers/features/highlightSlice";
 import './note.css'
 
-export const Note = ({ title, content }) => {
+export const Note = ({ title, content, id }) => {
     const highlight = useSelector(selectHighlight)
     const dispatch = useDispatch()
 
-    const handleHighlight = () => {
-        dispatch(setHighlight(highlight))
+    const handleClick = () => {
+        if(highlight === id) {
+            dispatch(setHighlight(false))
+        } else {
+            dispatch(setHighlight(id))
+        }
     }
 
     return(
         <div 
-            className={`noteContainer ${highlight ? '' : 'active'}`}
-            onClick={handleHighlight}
+            className={`noteContainer ${highlight === id && 'active'}`}
+            onClick={handleClick}
             >
             <div className="note">
                 <h1 className="title">{title}</h1>
