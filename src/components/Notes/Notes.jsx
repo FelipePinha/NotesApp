@@ -10,7 +10,8 @@ export const Notes = () => {
         <article className="notesArticle">
             {notes.map(note => (
                 <Note 
-                    key={note.id} 
+                    key={note.id}
+                    id={note.id}
                     title={note.title} 
                     content={note.content}
                 />
