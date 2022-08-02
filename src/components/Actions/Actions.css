@@ -1,0 +1,26 @@
+.actions {
+    display: flex;
+}
+
+.action {
+    padding: 5px;
+    margin-left: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    background: #555;
+    color: #fff;
+
+    cursor: pointer;
+}
+
+
+.icon {
+    border-radius: 3px;
+    padding: 5px;
+
+    font-size: 32px;
+}

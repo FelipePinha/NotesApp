@@ -1,5 +1,5 @@
 import React from "react";
-import { AddButton } from "../AddButton/AddButton";
+import { Actions } from "../Actions/Actions";
 import './header.css'
 
 export const Header = () => {
@@ -10,7 +10,7 @@ export const Header = () => {
                 NOUTO
             </h1>
 
-            <AddButton />
+            <Actions />
         </header>
     )
 }
