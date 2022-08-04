@@ -29,7 +29,7 @@ export const Actions = () => {
     }
 
     const handleDelete = () => {
-        dispatch(deleteNote(highlight))
+        dispatch(deleteNote(highlight.highlight))
         dispatch(setHighlight(false))
     }
 
