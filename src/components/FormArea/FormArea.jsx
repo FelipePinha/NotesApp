@@ -30,6 +30,7 @@ export const FormArea = () => {
                 content: data.content
             }))
         }
+        dispatch(formToggle(false))
     }
 
     const validationSchema = yup.object({
@@ -74,7 +75,7 @@ export const FormArea = () => {
             <div className="formActions">
                 <button type="submit" className="btn submitBtn"><FaCheck /></button>
                 <button 
-                    onClick={() => dispatch(formToggle(selectForm))}
+                    onClick={() => dispatch(formToggle(false))}
                     type="button" 
                     className="btn cancelBtn"
                     >

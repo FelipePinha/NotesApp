@@ -14,12 +14,12 @@ export const Actions = () => {
     const dispatch = useDispatch()
 
     const handleFormToggle = () => {
-        dispatch(formToggle(selectForm))
+        dispatch(formToggle(true))
     }
 
     const handleEdit = () => {
         if(highlight.highlight !== false) {
-            dispatch(formToggle(selectForm))
+            dispatch(formToggle(true))
             const highlightedNote = notes.find(note => note.id === highlight.highlight)
             dispatch(setHighlightedNote({
                 title: highlightedNote.title,

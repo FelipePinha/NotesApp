@@ -8,8 +8,8 @@ export const formToggleSlice = createSlice({
     name: 'formActive',
     initialState: initialState,
     reducers: {
-        formToggle: (state) => {
-            return !state
+        formToggle: (state, { payload }) => {
+            return {...state, formActive: payload}
         }
     }
 })

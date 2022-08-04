@@ -5,12 +5,12 @@ import { selectFormActive } from "../../reducers/features/formToggleSlice";
 import './notesWrapper.css'
 
 export const NotesWrapper = ({ children }) => {
-    const formActive = useSelector(selectFormActive)
+    const formIsOpen = useSelector(selectFormActive)
 
     return (
         <section className="notesSection">
             { children }
-            {formActive ? '' : <FormArea />}
+            {formIsOpen.formActive ? <FormArea /> : ''}
         </section>
     )
 }
