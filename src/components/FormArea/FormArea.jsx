@@ -4,7 +4,7 @@ import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useForm } from "react-hook-form";
 import { InputError } from "../InputError/InputError";
-import { addNote } from "../../reducers/features/notesSlice";
+import { addNote, editNote } from "../../reducers/features/notesSlice";
 import { formToggle, selectFormActive } from "../../reducers/features/formToggleSlice"
 import { selectHighlight } from '../../reducers/features/highlightSlice'
 import { useDispatch, useSelector } from 'react-redux'
@@ -17,11 +17,19 @@ export const FormArea = () => {
     const dispatch = useDispatch()
 
     const onSubmit = (data) => {
-        dispatch(addNote({
-            id: nanoid(),
-            title: data.title,
-            content: data.content
-        }))
+        if(!highlight.highlight) {
+            dispatch(addNote({
+                id: nanoid(),
+                title: data.title,
+                content: data.content
+            }))
+        } else {
+            dispatch(editNote({
+                id: highlight.highlight,
+                title: data.title,
+                content: data.content
+            }))
+        }
     }
 
     const validationSchema = yup.object({

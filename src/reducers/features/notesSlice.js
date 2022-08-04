@@ -9,8 +9,15 @@ export const notesSlice = createSlice({
         addNote: (state, { payload }) => {
             return [...state, payload]
         },
+        editNote: (state, { payload }) => {
+            state.map(note => {
+                if(note.id === payload.id) {
+                    note.title = payload.title
+                    note.content = payload.content
+                }
+            })
+        },
         deleteNote: (state, { payload }) => {
-            // console.log(payload)
             return [...state.filter(note => note.id !== payload)]
         }
     }
@@ -18,6 +25,6 @@ export const notesSlice = createSlice({
 
 export const selectNotes = state => state.notes
 
-export const { addNote, deleteNote } = notesSlice.actions
+export const { addNote, deleteNote, editNote } = notesSlice.actions
 export default notesSlice.reducer
 
