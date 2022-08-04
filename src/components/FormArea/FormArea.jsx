@@ -5,14 +5,13 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { useForm } from "react-hook-form";
 import { InputError } from "../InputError/InputError";
 import { addNote, editNote } from "../../reducers/features/notesSlice";
-import { formToggle, selectFormActive } from "../../reducers/features/formToggleSlice"
+import { formToggle } from "../../reducers/features/formToggleSlice"
 import { selectHighlight } from '../../reducers/features/highlightSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import { nanoid } from "@reduxjs/toolkit";
 import './formArea.css'
 
 export const FormArea = () => {
-    const selectForm = useSelector(selectFormActive)
     const highlight = useSelector(selectHighlight)
     const dispatch = useDispatch()
 

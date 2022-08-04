@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaPlus, FaPen, FaTrash } from 'react-icons/fa'
-import { formToggle, selectFormActive } from "../../reducers/features/formToggleSlice";
+import { formToggle } from "../../reducers/features/formToggleSlice";
 import { deleteNote } from "../../reducers/features/notesSlice";
 import { selectNotes } from "../../reducers/features/notesSlice";
 import { selectHighlight, setHighlight, setHighlightedNote} from "../../reducers/features/highlightSlice";
@@ -8,7 +8,6 @@ import { useDispatch, useSelector } from "react-redux";
 import './Actions.css'
 
 export const Actions = () => {
-    const selectForm = useSelector(selectFormActive)
     const highlight = useSelector(selectHighlight)
     const notes = useSelector(selectNotes)
     const dispatch = useDispatch()
