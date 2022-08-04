@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from 'react-redux'
-import { selectHighlight, setHighlight } from "../../reducers/features/highlightSlice";
+import { selectHighlight, setHighlight, setHighlightedNote } from "../../reducers/features/highlightSlice";
 import './note.css'
 
 export const Note = ({ title, content, id }) => {
@@ -8,8 +8,9 @@ export const Note = ({ title, content, id }) => {
     const dispatch = useDispatch()
 
     const handleClick = () => {
-        if(highlight === id) {
+        if(highlight.highlight === id) {
             dispatch(setHighlight(false))
+            dispatch(setHighlightedNote({ title: '', content: '' }))
         } else {
             dispatch(setHighlight(id))
         }
@@ -17,7 +18,7 @@ export const Note = ({ title, content, id }) => {
 
     return(
         <div 
-            className={`noteContainer ${highlight === id && 'active'}`}
+            className={`noteContainer ${highlight.highlight === id && 'active'}`}
             onClick={handleClick}
             >
             <div className="note">

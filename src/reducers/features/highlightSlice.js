@@ -1,7 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-    highlight: false
+    highlight: false,
+    highlightedNote: {
+        title: '',
+        content: ''
+    }
 }
 
 export const highlightSlice = createSlice({
@@ -9,12 +13,15 @@ export const highlightSlice = createSlice({
     initialState: initialState,
     reducers: {
         setHighlight: (state, { payload }) => {
-            return payload
-        } 
+            return {...state, highlight: payload}
+        },
+        setHighlightedNote: (state, { payload }) => {
+            return {...state, highlightedNote: payload}
+        }
     }
 })
 
 export const selectHighlight = state => state.highlight
 
-export const {setHighlight} = highlightSlice.actions
+export const {setHighlight, setHighlightedNote} = highlightSlice.actions
 export default highlightSlice.reducer
