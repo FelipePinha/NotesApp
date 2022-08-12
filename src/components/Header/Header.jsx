@@ -6,8 +6,8 @@ export const Header = () => {
     return(
         <header className="header">
             <h1 className="logo">
-                <span>SUPA</span>
-                NOUTO
+                <span>NOTES</span>
+                APP
             </h1>
 
             <Actions />
