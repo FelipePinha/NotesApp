@@ -7,7 +7,8 @@
   <h2>Técnologias</h2>
   
   <ul>
-    <li>React js</li>
+    <li>Vite</li>
+    <li>React.js</li>
     <li>Redux toolkit</li>
     <li>React hook form & Yup</li>
   </ul>
