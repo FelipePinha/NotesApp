@@ -1,6 +1,6 @@
 import React from "react";
 import { Note } from "../Note/Note";
-import { selectNotes } from "../../reducers/features/notesSlice";
+import { selectNotes } from "../../redux/features/notesSlice";
 import { useSelector } from "react-redux";
 import './notes.css'
 

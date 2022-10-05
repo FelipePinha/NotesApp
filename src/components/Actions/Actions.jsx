@@ -1,9 +1,9 @@
 import React from "react";
 import { FaPlus, FaPen, FaTrash } from 'react-icons/fa'
-import { formToggle } from "../../reducers/features/formToggleSlice";
-import { deleteNote } from "../../reducers/features/notesSlice";
-import { selectNotes } from "../../reducers/features/notesSlice";
-import { selectHighlight, setHighlight, setHighlightedNote} from "../../reducers/features/highlightSlice";
+import { formToggle } from "../../redux/features/formToggleSlice";
+import { deleteNote } from "../../redux/features/notesSlice";
+import { selectNotes } from "../../redux/features/notesSlice";
+import { selectHighlight, setHighlight, setHighlightedNote} from "../../redux/features/highlightSlice";
 import { useDispatch, useSelector } from "react-redux";
 import './Actions.css'
 

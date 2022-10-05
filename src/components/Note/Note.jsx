@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from 'react-redux'
-import { selectHighlight, setHighlight, setHighlightedNote } from "../../reducers/features/highlightSlice";
+import { selectHighlight, setHighlight, setHighlightedNote } from "../../redux/features/highlightSlice";
 import './note.css'
 
 export const Note = ({ title, content, id }) => {

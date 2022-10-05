@@ -4,9 +4,9 @@ import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useForm } from "react-hook-form";
 import { InputError } from "../InputError/InputError";
-import { addNote, editNote } from "../../reducers/features/notesSlice";
-import { formToggle } from "../../reducers/features/formToggleSlice"
-import { selectHighlight } from '../../reducers/features/highlightSlice'
+import { addNote, editNote } from "../../redux/features/notesSlice";
+import { formToggle } from "../../redux/features/formToggleSlice"
+import { selectHighlight } from '../../redux/features/highlightSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import { nanoid } from "@reduxjs/toolkit";
 import './formArea.css'
