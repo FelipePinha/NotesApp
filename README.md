@@ -20,5 +20,6 @@
     <li>Editar notas</li>
     <li>Excluir notas</li>
     <li>Validação de form</li>
+    <li>Responsivo</li>
   <ul>
 </div>
