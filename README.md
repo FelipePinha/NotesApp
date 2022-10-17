@@ -8,7 +8,7 @@
   
   <ul>
     <li>Vite</li>
-    <li>React.js</li>
+    <li>React</li>
     <li>Redux toolkit</li>
     <li>React hook form & Yup</li>
   </ul>
